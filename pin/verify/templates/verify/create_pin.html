@@ -1,0 +1,21 @@
+{% extends 'verify/base.html' %}
+
+{% block content %}
+
+<form class='form-inline' action="{% url 'create' %}" method="POST">
+  <p>
+    To continue we need to verify your phone number.
+  </p>
+
+
+  {% csrf_token %}
+  
+
+
+
+  <div class="form-group">
+    <input type="submit" name="name" value="Verify" class='btn btn-primary'>
+  </div>
+</form>
+
+{% endblock %}
